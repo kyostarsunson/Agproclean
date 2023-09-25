@@ -1,0 +1,43 @@
+/* 清除掉默认的内外间距 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 导航条定高度和背景色，宽度不定，大通栏 */
+.nav {
+    height: 58px;
+    background-color: #b0dddd;
+}
+
+.center {
+    width: 1000px;
+    list-style: none;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+/* 利用浮动让每一个选项横向排列 */
+li {
+    float: left;
+    border-right: 1px solid rgb(161, 158, 158);
+}
+
+/* 鼠标滑过编一个背景色 */
+li:hover {
+    background-color: violet;
+}
+
+/* 转块元素是为了让选项的点击范围变大，左右通过内间距挤开，行高和大通栏高度一样 */
+a {
+    display: block;
+    padding: 0 20px;
+    line-height: 58px;
+    text-decoration: none;
+    color: white;
+}
+
+/* 取消最后一个选项的右侧线 */
+.nav li:last-child {
+    border-right: 0;
+}

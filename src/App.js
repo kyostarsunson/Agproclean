@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import MyMenu from './components/MyMenu'
+import MyAppointment from './components/MyFoot'
+import MyFoot from './components/MyAppointment'
+import { Divider } from 'antd';
+import { Layout } from 'antd';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Layout>
+      <MyMenu></MyMenu> <Divider plain>Text</Divider>
+      <MyAppointment></MyAppointment> <Divider plain>Text</Divider>
+      <MyFoot></MyFoot>
+    </Layout>
+
+   
   );
 }
 
