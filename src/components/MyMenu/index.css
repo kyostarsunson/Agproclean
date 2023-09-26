@@ -10,17 +10,19 @@
     background-color: #b0dddd;
 }
 
-.center {
-    width: 1000px;
+.menu {
+    width: 100%;
     list-style: none;
     margin: 0 auto;
     background-color: pink;
+    float: left;
 }
 
 /* 利用浮动让每一个选项横向排列 */
 li {
     float: left;
     border-right: 1px solid rgb(161, 158, 158);
+    opacity: 0.5;
 }
 
 /* 鼠标滑过编一个背景色 */
@@ -40,4 +42,31 @@ a {
 /* 取消最后一个选项的右侧线 */
 .nav li:last-child {
     border-right: 0;
+}
+.bannerbox {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 1000px;
+}
+
+.banner {
+    width: 3000px;
+    position: absolute;
+    left: 50%;
+    margin-left: -1500px;
+}
+
+.logo {
+
+    width: 58px;
+    content: url('./logo512.png');
+    float: left;
+}
+
+.hoverword{
+    color: wheat;
+    font-size: xx-large;
+    position: absolute;left: 100px; top: 700px;
+    z-index: 1;
 }
