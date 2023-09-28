@@ -1,16 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component, Route } from 'react'
 import MyMenu from './components/MyMenu'
-import MyAppointment from './components/MyFoot'
-import MyFoot from './components/MyAppointment'
-import { Divider } from 'antd';
+import { Switch } from 'react-router-dom';
+
+import MyFoot from './components/MyFoot'
 import { Layout } from 'antd';
 
 function App() {
+
   return (
 
     <Layout>
-      <MyMenu></MyMenu> <Divider plain>Text</Divider>
-      <MyAppointment></MyAppointment> <Divider plain>Text</Divider>
+      <MyMenu></MyMenu>
+
+    
+
+      
       <MyFoot></MyFoot>
     </Layout>
 

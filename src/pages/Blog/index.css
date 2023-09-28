@@ -1,0 +1,13 @@
+.blog_item_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.blog_item_card div {
+    margin: 16px;
+}
+
+h2 {margin-left:300px}

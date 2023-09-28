@@ -6,35 +6,35 @@
 
 /* 导航条定高度和背景色，宽度不定，大通栏 */
 .nav {
-    height: 58px;
-    background-color: #b0dddd;
+    height: 96px;
+    background-color: #777777;
 }
 
 .menu {
     width: 100%;
     list-style: none;
     margin: 0 auto;
-    background-color: pink;
+    background-color: #b3b5b7;
     float: left;
 }
 
 /* 利用浮动让每一个选项横向排列 */
-li {
+.nav li {
     float: left;
     border-right: 1px solid rgb(161, 158, 158);
     opacity: 0.5;
 }
 
 /* 鼠标滑过编一个背景色 */
-li:hover {
-    background-color: violet;
+.nav li:hover {
+    background-color: #b3b5b7;
 }
 
 /* 转块元素是为了让选项的点击范围变大，左右通过内间距挤开，行高和大通栏高度一样 */
-a {
+.nav a {
     display: block;
-    padding: 0 20px;
-    line-height: 58px;
+    padding: 0 48px;
+    line-height: 96px;
     text-decoration: none;
     color: white;
 }
@@ -59,7 +59,7 @@ a {
 
 .logo {
 
-    width: 58px;
+    width: 96px;
     content: url('./logo512.png');
     float: left;
 }
@@ -69,4 +69,9 @@ a {
     font-size: xx-large;
     position: absolute;left: 100px; top: 700px;
     z-index: 1;
+}
+
+Button {
+    margin:16px;
+    
 }

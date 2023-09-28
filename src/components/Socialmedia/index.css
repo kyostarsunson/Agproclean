@@ -1,0 +1,16 @@
+.socialmedia-right {
+    float: right;
+    font-size: large;
+    color: red;
+}
+
+.socialmedia-right li {
+    float: left;
+    margin:32px 48px ;
+}
+
+.socialmedia {
+
+ 
+}
+
