@@ -4,12 +4,13 @@ import { NavLink } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import About from '../../pages/Aboutus'
 import Home from '../../pages/Home'
-
+import { BarsOutlined } from '@ant-design/icons';
 
 import Project from '../../pages/Project'
 import Blog from '../../pages/Blog'
 import Contact from '../../pages/Contact'
 import Ourservices from '../../pages/Ourservices'
+import Login from '../../pages/Login'
 
 
 
@@ -17,6 +18,7 @@ import { MenuUnfoldOutlined } from '@ant-design/icons';
 import background from './background.png'
 import { Button } from 'antd';
 import Aboutus from '../../pages/Aboutus';
+import { Icon } from '@material-ui/core';
 
 
 export default class MyMenu extends Component {
@@ -28,6 +30,7 @@ export default class MyMenu extends Component {
                     <img className='logo' alt=''></img>
                     <ul className="nav">
                         <li>
+
                             < NavLink className={({ isActive }) => (isActive ? "activeButton" : "")} {...this.props} to="/home" >HOME</NavLink>
                         </li>
                         <li>
@@ -45,7 +48,15 @@ export default class MyMenu extends Component {
                         <li>
                             < NavLink className={({ isActive }) => (isActive ? "activeButton" : "")} {...this.props} to="/Contact" >CONTACT</NavLink>
                         </li>
+                        <li>
+                            <div>
+                                <span><a href="login.html" target="_blank" rel="noopener noreferrer"> <BarsOutlined style={{ fontSize: '72px', color: 'white', textAlign: 'center' }} /></a></span>
+
+
+                            </div>
+                        </li>
                     </ul>
+
                 </div>
                 <div className='hoverword'>
                     <h3>welcom to our webstie</h3>
@@ -70,6 +81,7 @@ export default class MyMenu extends Component {
                     <Route path='/Project' component={Project} />
                     <Route path='/Blog' component={Blog} />
                     <Route path='/Contact' component={Contact} />
+                    <Route path='/Login' component={Login} />
                     <Redirect to='/home' />
                 </Switch>
 
