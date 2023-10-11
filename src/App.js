@@ -11,10 +11,6 @@ function App() {
 
     <Layout>
       <MyMenu></MyMenu>
-
-    
-
-      
       <MyFoot></MyFoot>
     </Layout>
 

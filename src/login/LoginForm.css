@@ -1,0 +1,32 @@
+
+.LoginForm {
+    background-color:black;
+    color:aliceblue;
+    width: 500px;
+    height: 600px;
+    opacity: 50%;
+    position: absolute;
+    margin: auto;
+    border-radius: 30px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 50px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.loginButton {
+    display: flex;
+    justify-content: center;
+}
+
+.or {
+    display: flex;
+    justify-content: center;
+}
+.inputlogin {color:black}

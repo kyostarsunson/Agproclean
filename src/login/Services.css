@@ -1,0 +1,13 @@
+.ant-layout-content css-dev-only-do-not-override-1ck3jst {
+
+    margin-left: 300px;
+}
+
+.ant-advanced-search-form {
+    padding: 24px;
+    border-radius: 6px;
+}
+
+.ant-advanced-search-form .ant-form-item {
+    display: flex;
+}

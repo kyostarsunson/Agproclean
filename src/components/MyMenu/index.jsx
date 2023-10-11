@@ -3,7 +3,7 @@ import './index.css'
 import { NavLink } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import About from '../../pages/Aboutus'
-import Home from '../../pages/Home'
+
 import { BarsOutlined } from '@ant-design/icons';
 
 import Project from '../../pages/Project'
@@ -14,11 +14,9 @@ import Login from '../../pages/Login'
 
 
 
-import { MenuUnfoldOutlined } from '@ant-design/icons';
 import background from './background.png'
 import { Button } from 'antd';
-import Aboutus from '../../pages/Aboutus';
-import { Icon } from '@material-ui/core';
+
 
 
 export default class MyMenu extends Component {
@@ -50,9 +48,7 @@ export default class MyMenu extends Component {
                         </li>
                         <li>
                             <div>
-                                <span><a href="login.html" target="_blank" rel="noopener noreferrer"> <BarsOutlined style={{ fontSize: '72px', color: 'white', textAlign: 'center' }} /></a></span>
-
-
+                                <span><a href="login.html" target="_blank" rel="noopener noreferrer"> <BarsOutlined style={{ fontSize: '36px', color: 'white', textAlign: 'center' }} /></a></span>
                             </div>
                         </li>
                     </ul>
@@ -60,8 +56,8 @@ export default class MyMenu extends Component {
                 </div>
                 <div className='hoverword'>
                     <h3>welcom to our webstie</h3>
-                    <h1>Cleaning SERVICES</h1>
-                    <h2>fdsafdsaf</h2>
+                    <h1>CLEANING SERVICES</h1>
+                    <h2>YOUR FIRST CHOISE</h2>
                     <Button size='large'> Read More</Button>
 
                     <Button type="primary" size='large'>Contact us</Button>
@@ -82,6 +78,7 @@ export default class MyMenu extends Component {
                     <Route path='/Blog' component={Blog} />
                     <Route path='/Contact' component={Contact} />
                     <Route path='/Login' component={Login} />
+
                     <Redirect to='/home' />
                 </Switch>
 
