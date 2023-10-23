@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Input } from "antd";
+import { Button, Input, message } from "antd";
 import axios from "axios";
 import { GoogleOutlined, TwitterOutlined } from "@ant-design/icons";
 import './LoginForm.css'
@@ -10,6 +10,7 @@ export default class LoginForm extends Component {
         //     response => { console.log('success', response.data); },
         //     error => { console.log('fail', 'error') })
 
+
         axios
             .post("http://localhost:3001/api1/userLogin", {
                 loginname: this.loginname.input.value,
@@ -17,38 +18,46 @@ export default class LoginForm extends Component {
             })
             .then(
                 (response) => {
-
+                    if (response.data.code == "1") {
                     console.log("success", response.data);
                     console.log(this)
                     console.log(this.loginname.input.value);
                     console.log(this.password.input.value);
-                    this.props.history.push('/adminManager')
+                        this.props.history.push({ pathname: '/adminManager', loginname: this.loginname.input.value });
+                    }
+                    else {
+                        message.info(response.data.message)
+                        this.props.history.push('/adminManager');
+
+                    }
                 },
                 (error) => {
-                   this.props.history.push('/adminManager')
+                    //this.props.history.push('/adminManager')
                     // console.log(this)
                     // console.log(this.loginname.input.value);
                     // console.log(this.password.input.value);
                     // console.log("User certificated fail", "error");
-                    //alert("User certificated fail")
+                    //message.error(error)
+                    console.log(error.code);
+                    message.error(error.code)
                 }
             );
 
 
     };
     render() {
+
         return (
             <div>
                 <div className="LoginForm">
                     <h1 style={{ textAlign: 'center' }}>Login</h1>
                     <h2>Login Name</h2>
-                    <Input className="inputlogin" ref={(c) => (this.loginname = c)} placeholder="example@abc.com" bordered={false} />
+                    <Input ref={(c) => (this.loginname = c)} placeholder="example@abc.com" size='large' />
 
                     <hr></hr>
 
                     <h2>Password</h2>
-
-                    <Input color='red' className="inputlogin" ref={(c) => (this.password = c)} placeholder="*******" bordered={false} />
+                    <Input.Password style={{ color: 'white' }} ref={(c) => (this.password = c)} placeholder="input password" size='large' />
 
                     <hr></hr>
                     <br></br>

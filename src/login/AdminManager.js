@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Button, Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
+import axios from "axios";
+
 const {
     Header, Content, Footer, Sider,
 } = Layout;
@@ -15,6 +17,35 @@ export default class Admin extends Component {
     componentDidMount() {
         // if (this.props.history)
         //     this.props.history.push('adminManager')
+
+
+        if (this.props.history) {
+            const loginname = this.props.history.location.loginname;
+            sessionStorage.setItem('loginname', loginname);
+            console.log('sessionStorage.length', sessionStorage.length, 'sessionStorage ,key0', sessionStorage.key(0))
+
+
+            console.log('in adminmanager,this=', this, ',this.props.history.location.loginnam=', loginname);
+            //this.props.history.push({ pathname: '/collegeRole' });
+            axios.post('http://localhost:3001/api1/getAccountByLoginName', { loginname: loginname }).then((res) => {
+                if (res.data.code === '1') {
+                    console.log(res.data)
+                } else {
+                    console.log('res.data.code!=1', res.data);
+                }
+
+                //this.setState({ tableData, course, currentMenu: course[0] });
+                //this.handleCourseClick(course[0])
+            });
+
+
+
+
+
+        }
+
+
+
     };
     render() {
         const { itemId } = this.state;

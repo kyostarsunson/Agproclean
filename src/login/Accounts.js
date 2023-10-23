@@ -13,7 +13,7 @@ export default class Accounts extends Component {
     }
 
     getTableData = (data) => {
-        console.log('in  get service:')
+        console.log('in  get accunt:');
         axios
             .get("http://localhost:3001/api1/getAllAccount")
             .then(
@@ -30,8 +30,16 @@ export default class Accounts extends Component {
 
     };
 
+    editHandle = (e) => {
+        console.log('in account edithandle', e.loginname);
+       
+        this.props.history.push({ pathname: '/profile', queryloginname: e.loginname });
+
+    }
+
+
     columns = [
-        { title: 'accountid', dataIndex: 'accountID', },
+        { title: 'accountid', dataIndex: 'accountid', },
         { title: 'fullname', dataIndex: 'fullname', },
         { title: 'email', dataIndex: 'email', },
         { title: 'phone', dataIndex: 'phone', },
@@ -39,12 +47,26 @@ export default class Accounts extends Component {
         { title: 'password', dataIndex: 'password', },
         { title: 'active', dataIndex: 'active', },
         { title: 'subscribed', dataIndex: 'subscribed', },
-        { title: 'roleid', dataIndex: 'roleID', },
+        { title: 'roleid', dataIndex: 'roleid', },
+        {
+            title: 'Action', render: (text, record) => (record.accountid
+                ? (<Button onClick={() => this.editHandle(record)}>Edit</Button>)
+                : (
+                    <span>
+                        <Button onClick={() => this.deleteHandle(record)}>Delete</Button>
+                        <span>   </span>
+
+                    </span>
+                )
+            ),
+        },
     ];
 
     handleSearch = () => {
-        this.getTableData()
-    }
+        //this.getTableData();
+        this.props.history.push({ pathname: '/profile', action: 'adduser' });
+    };
+
     render() {
         const { tableData, semesterList } = this.state;
         return (
