@@ -3,6 +3,7 @@ import { Button, Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
+
 const {
     Header, Content, Footer, Sider,
 } = Layout;
@@ -70,6 +71,12 @@ export default class Admin extends Component {
                                 onClick={() => this.setState({ itemId: ['1'] })}>Accounts</Link></Menu.Item>
                             <Menu.Item key="4"><Link to='Profile'
                                 onClick={() => this.setState({ itemId: ['4'] })}>Profile</Link></Menu.Item>
+                            <Menu.Item key="5"><Link to='Appointment'
+                                onClick={() => this.setState({ itemId: ['5'] })}>Appointment</Link></Menu.Item>
+                            <Menu.Item key="6"><Link to='Quote'
+                                onClick={() => this.setState({ itemId: ['6'] })}>Quote</Link></Menu.Item>
+
+
                         </Menu>
                     </Sider>
 

@@ -1,0 +1,128 @@
+import React, { Component, useState, useEffect } from 'react'
+import { Card, Col, Row } from 'antd';
+import { Column, Pie } from '@ant-design/charts';
+
+import AdminManager from './AdminManager';
+
+export default class Dashboard extends Component {
+    render() {
+        const data2 = [
+            { year: '1991', value: 3 },
+            { year: '1992', value: 4 },
+            { year: '1993', value: 3.5 },
+            { year: '1994', value: 5 },
+            { year: '1995', value: 4.9 },
+            { year: '1996', value: 6 },
+            { year: '1997', value: 7 },
+            { year: '1998', value: 9 },
+            { year: '1999', value: 13 },
+        ];
+
+        const data = [
+            { year: '1991', value: 3 },
+            { year: '1992', value: 4 },
+            { year: '1993', value: 3.5 },
+            { year: '1994', value: 5 },
+            { year: '1995', value: 4.9 },
+            { year: '1996', value: 6 },
+            { year: '1997', value: 7 },
+            { year: '1998', value: 9 },
+            { year: '1999', value: 13 },
+        ];
+
+        const config = {
+            data,
+            title: {
+                visible: true,
+                text: '带数据点的折线图',
+            },
+            xField: 'year',
+            yField: 'value',
+        };
+
+
+        const config2 = {
+            forceFit: true,
+            title: {
+                visible: true,
+                text: '多色饼图',
+            },
+            description: {
+                visible: true,
+                text:
+                    '指定颜色映射字段(colorField)\uFF0C饼图切片将根据该字段数据显示为不同的颜色\u3002指定颜色需要将color配置为一个数组\u3002\n当把饼图label的类型设置为inner时\uFF0C标签会显示在切片内部\u3002设置offset控制标签的偏移值\u3002',
+            },
+            radius: 0.8,
+            data,
+            angleField: 'value',
+            colorField: 'type',
+            label: {
+                visible: true,
+                type: 'inner',
+            },
+        };
+
+
+        return (
+            <AdminManager>
+                <div>
+                    <div>Hello,</div>
+                    <div>
+
+
+
+
+                        <Row gutter={16}>
+                            <Col span={6}>
+                                <Card title="TOTAL EARNINGS" bordered={false}>
+                                    <h1> $ 559.25k</h1>
+                                    <a href=''>View net earnings</a>
+                                </Card>
+                            </Col>
+                            <Col span={6}>
+                                <Card title="PRODUCT SALES" bordered={false}>
+                                    <h1> $ 1.00k </h1>
+                                    <a href=''>View total orders</a>
+                                </Card>
+                            </Col>
+                            <Col span={6}>
+                                <Card title="REFUNDS" bordered={false}>
+                                    <h1> $ 0.00k </h1>
+                                    <a href=''>View detail</a>
+                                </Card>
+                            </Col>
+                            <Col span={6}>
+                                <Card title="MY BALANCE" bordered={false}>
+                                    <h1> $ 120.25k </h1>
+                                    <a href=''>Withdraw money</a>
+                                </Card>
+                            </Col>
+                        </Row>
+
+
+
+                    </div>
+                    <div>
+                        <hr></hr>
+
+                        <Row gutter={16}>
+                            <Col span={16}>
+                                <Card title="Revenue" bordered={false}>
+                                    <Column  {...config} />
+                                </Card>
+                            </Col>
+                            <Col span={8}>
+                                <Card title="Card title" bordered={false}>
+                                    <Pie {...config2} />
+                                </Card>
+                            </Col>
+                        </Row>
+
+                    </div>
+
+
+
+                </div></AdminManager>
+        )
+    }
+}

@@ -26,8 +26,8 @@ export default class LoginForm extends Component {
                         this.props.history.push({ pathname: '/adminManager', loginname: this.loginname.input.value });
                     }
                     else {
-                        message.info(response.data.message)
-                        this.props.history.push('/adminManager');
+                        message.error(response.data.message)
+                        //this.props.history.push('/adminManager');
 
                     }
                 },

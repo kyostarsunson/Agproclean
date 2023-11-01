@@ -7,11 +7,15 @@ import LoginForm from "./LoginForm";
 import Services from "./Services"
 import Accounts from './Accounts'
 import Dashboard from "./Dashboard";
-import AdminManager from "./AdminManager";
+
 import AddService from './AddService';
 import Profile from "./Profile";
+import Appointment from "./Appointment";
+import Quote from "./Quote";
+import AdminManager from "./AdminManager";
 
 import "/node_modules/antd/dist/reset.css";
+
 
 class App extends Component {
 
@@ -21,7 +25,7 @@ class App extends Component {
         return (
 
 
-            <div>
+            <body>
 
                 <Switch>
                     <Route path='/adminManager' component={AdminManager} />
@@ -32,12 +36,15 @@ class App extends Component {
                     <Route path='/LoginForm' component={LoginForm} />
                     <Route path='/AddService' component={AddService} />
                     <Route path='/Profile' component={Profile} />
+                    <Route path='/Appointment' component={Appointment} />
+                    <Route path='/Quote' component={Quote} />
+                    <Route path='/Dashboard' component={Dashboard} />
 
                     <Redirect to='/LoginForm' />
                 </Switch>
 
 
-            </div>
+            </body>
         );
     }
 }
