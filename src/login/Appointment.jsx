@@ -14,7 +14,7 @@ export default class Appointment extends Component {
     getTableData = (data) => {
         console.log('in  get accunt:');
         axios
-            .get("http://localhost:3001/api1/getAppointmentByAccountID")
+            .get("http://localhost:3001/api1/appointment")
             .then(
                 (response) => {
                     console.log("success", response.data.data);
@@ -23,7 +23,7 @@ export default class Appointment extends Component {
                 },
                 (error) => {
                     // console.log(this)
-                    alert("getAppointment fail")
+                    console.log("getAppointment fail", "in appointment.jsx")
                 }
             );
 
@@ -38,11 +38,11 @@ export default class Appointment extends Component {
 
 
     columns = [
-        { title: 'appointmentID', dataIndex: 'appointmentID', },
-        { title: 'appointmentDateTime', dataIndex: 'appointmentDateTime', },
-        { title: 'appointmentLocation', dataIndex: 'appointmentLocation', },
-        { title: 'appointmentStatus', dataIndex: 'appointmentStatus', },
-        { title: 'appointmentNote', dataIndex: 'appointmentNote', },
+        { title: 'appointmentID', dataIndex: 'appointmentid', },
+        { title: 'appointmentDateTime', dataIndex: 'appointmentdatetime', },
+        { title: 'appointmentLocation', dataIndex: 'appointmentlocation', },
+        { title: 'appointmentStatus', dataIndex: 'appointmentstatus', },
+        { title: 'appointmentNote', dataIndex: 'appointmentnote', },
         {
             title: 'Action', render: (text, record) => (record.accountid
                 ? (<Button onClick={() => this.editHandle(record)}>Edit</Button>)
