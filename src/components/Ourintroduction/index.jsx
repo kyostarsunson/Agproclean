@@ -14,15 +14,20 @@ export default class Ourintroduction extends Component {
                     <img src={introduction1} alt=""></img>
                 </div>
                 <div className="aboutus_item_2">
-                    <h3>Our Introduction</h3>
+                
+                    <h2>Our Introduction</h2>
                     <h2>One Stop Commercial Cleaning Company</h2>
-                    <h3>when it ................................................................................</h3>
+                    <h2>
+                        When it comes to the health of your family, there should be no compromise.
+                        AspenClean was born out of a parent's journey to find a safe and effective alternative to chemical-based cleaning products. You can trust our eco-friendly products for your family and pets, because we trust them for ours.</h2>
+                   
                 </div>
-
+                <div>+1 (403) 123-1234</div>
                 <div className="aboutus_item_3">
                     <h3>Best Experts in Calgary</h3>
                     <h2>Your happiness is our first priority</h2>
-                    <h3>when it ................................................................................</h3>
+                    <h2>When it comes to the health of your family, there should be no compromise.
+                        AspenClean was born out of a parent's journey to find a safe and effective alternative to chemical-based cleaning products. You can trust our eco-friendly products for your family and pets, because we trust them for ours.</h2>
                     <div>
                         <h2>Residential Cleaning service</h2>
                     </div>
@@ -37,6 +42,10 @@ export default class Ourintroduction extends Component {
 
                 <div className="aboutus_item_5">
                     <h1>What Makes AgPro Cleaning Special</h1>
+
+
+
+
                     <Row gutter={8}>
                         <Col span={4}>
                             <Card hoverable style={{ width: 300 }} cover={<img alt="example" src={introduction3} />}>

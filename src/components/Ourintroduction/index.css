@@ -1,7 +1,7 @@
 .container2 {
     display: grid;
-    grid-template-columns: 15% auto 15%;
-    grid-template-rows: 300px 300px 500px 500px 500px;
+    grid-template-columns: 30% auto 30%;
+    grid-template-rows: 500px 500px 500px 500px 600px;
     text-align: center;
     width: 100%;
     grid-column-gap: 50px;
@@ -11,11 +11,13 @@
 
 .aboutus_item_1 {
     /* background-color: black; */
+        grid-column-start: 1;
+        grid-column-end: 2;
     margin: 16px;
 }
 
 .aboutus_item_1 img {
-    width: 300px;
+    width: 500px;
     float: left;
 }
 
@@ -24,12 +26,13 @@
     grid-column-end: 4;
     margin: 16px;
     text-align: left;
+    float:left;
     /* background-color: green; */
 }
 
 .aboutus_item_3 {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
     text-align: left;
@@ -47,7 +50,7 @@
 }
 
 .aboutus_item_4 img {
-    width: 200px;
+    width: 400px;
     float: right;
 }
 
