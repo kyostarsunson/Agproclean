@@ -1,11 +1,57 @@
-.contact {
-    color: #dedede;
+
+.contactParent {
     width: 100%;
-    float: left;
-    margin: 50px;
-    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.contact {
+    background-color: #ebe7e7;
+    margin: 25px 20px 75px 10px;
+    width: 60%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact div h1 {
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: "Noto Serif CJK SC Light";
+    width: 100%;
+}
+
+.contact div h2, .contact div div {
+    margin-left: 50px;
+    margin-top: 32px;
+    width: 50%;
+}
+
+.contact iframe {
+    margin-left: 50px;
+}
+
+.contact div h3 {
+    margin-left: 50px;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.sendMessage Input, .sendMessage Textarea {
+    display: flex;
+    width: 40%;
+    margin-left: 48px;
+    margin-top: 16px;
+}
+
+
+.contact div {
+    width: 50%;
+    text-align: left;
+}
 
 .newsletter {
     color: #dedede;

@@ -7,7 +7,8 @@
 /* 导航条定高度和背景色，宽度不定，大通栏 */
 .nav {
     height: 96px;
-    background-color: #777777;
+    background-color: #000000;
+
 }
 
 .menu {
@@ -15,24 +16,32 @@
     list-style: none;
     margin: 0 auto;
     background-color: #b3b5b7;
+    font-size: x-large;
     float: left;
     opacity: 80%;
     position: -webkit-sticky;
     position: sticky;
+    height: 60px;
     top: 0;
+    z-index: 100;
 }
 
-/* 利用浮动让每一个选项横向排列 */
-.nav li {
-    float: left;
-    display: block;
-    border-right: 1px solid rgb(161, 158, 158);
-    opacity: 0.5;
+.menu ul {
+    display: flex;
+}
+
+.menu li {
+    list-style-type: "|";
+}
+
+.menu ul > li:nth-child(7) {
+    margin-left: auto;
+    list-style-type: none;
 }
 
 /* 鼠标滑过编一个背景色 */
 .nav li:hover {
-    background-color: #b3b5b7;
+    background-color: #d6b194;
 }
 
 /* 转块元素是为了让选项的点击范围变大，左右通过内间距挤开，行高和大通栏高度一样 */
@@ -42,12 +51,10 @@
     line-height: 96px;
     text-decoration: none;
     color: white;
+
 }
 
-/* 取消最后一个选项的右侧线 */
-.nav li:last-child {
-    border-right: 0;
-}
+
 .bannerbox {
     width: 100%;
     position: relative;
@@ -81,21 +88,23 @@ html {
     overflow-x: hidden;
 
 }
-.hoverword{
+
+.hoverword {
     color: #32251a;
     font-size: xx-large;
-    position: absolute;left: 100px; top: 700px;
+    position: absolute;
+    left: 100px;
+    top: 700px;
     z-index: 1;
 }
 
 Button {
-    margin:16px;
-    
+    margin: 16px;
+
 }
 
 .menuandbanner {
-    background-image: url("background.png");
-    background-size: cover;
+
 }
 
 .flex-end {
