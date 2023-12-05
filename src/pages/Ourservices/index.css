@@ -1,21 +1,34 @@
-.ourservices-body {
-
-    display: grid;
-    grid-template-columns: 30% auto 30%;
-    grid-template-rows: 500px 500px 500px;
-    text-align: center;
-    width: 100%;
-    grid-column-gap: 16px;
-    grid-row-gap: 8px;
+.ourservices-whole {
+    width: 1920px;
+    background-color: white;
+    display: block;
+    margin: auto;
+    font-size: 20px;
 }
 
+
+.ourservices-body {
+    display: grid;
+    grid-template-rows: 1000px 1141px 760px;
+    text-align: center;
+    width: 90%;
+    grid-column-gap: 16px;
+    grid-row-gap: 8px;
+    margin-top: 96px;
+}
+
+.ourservice_item_1 button {
+    margin-left: 450px;
+
+}
 
 .ourservice_item_1 {
     grid-column-start: 1;
     grid-column-end: 3;
 
     text-align: left;
-    padding: 48px;
+    padding-left: 48px;
+    padding-top: 220px;
 }
 
 
@@ -26,7 +39,7 @@
 }
 
 .ourservice_item_2 img {
-    width: 400px;
+    width: 900px;
 }
 
 .ourservice_item_3 {
@@ -38,7 +51,7 @@
 }
 
 .ourservice_item_3 img {
-    width: 400px;
+    width: 900px;
 }
 
 .ourservice_item_4 {
@@ -47,7 +60,7 @@
     grid-column-end: 4;
     grid-row-start: 2;
     text-align: left;
-    margin: 16px;
+    margin: 32px;
 }
 
 .ourservice_item_5 {
@@ -57,7 +70,7 @@
     grid-row-start: 3;
     text-align: left;
     background-color: #ebe7e7;
-    margin: 16px;
+
 }
 
 .ourservice_item_5 div {
@@ -67,8 +80,9 @@
 
 .ourservice_item_5 div div {
     background-color: white;
-    width: 250px;
+    width: 444px;
     height: 150px;
     margin: 16px;
-    flex-direction:column;
+
+    flex-direction: column;
 }

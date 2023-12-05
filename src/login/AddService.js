@@ -1,15 +1,20 @@
-import React, { Component } from 'react'
-import { Row, Col, Button, Table, Modal } from 'antd'
+import React, {Component} from 'react'
+import {Row, Col, Button, message, Table, Modal} from 'antd'
 import AdminManager from './AdminManager'
 import axios from 'axios'
 
 export default class AddService extends Component {
     onAddService = () => {
-        axios.post('http://localhost:3001/api1/addService', { serviceName: this.serviceName.value, rate: this.rate.value, descript: this.descript.value }).then((res) => {
+        axios.post('http://70.75.134.37:3001/api1/addService', {
+            serviceName: this.serviceName.value,
+            rate: this.rate.value,
+            description: this.descript.value
+        }).then((res) => {
             if (res.data.code === '1') {
-                alert('Success add!');
+                message.success(res.data.message)
                 this.props.history.push('/Services')
-            }
+            } else
+                message.error(res.data.message)
         });
     }
 

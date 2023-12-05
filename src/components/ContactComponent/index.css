@@ -1,16 +1,18 @@
 
 .contactParent {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 1920px;
+    background-color: white;
+    display: block;
+    margin: auto;
+    font-size: 20px;
 }
 
 .contact {
     background-color: #ebe7e7;
-    margin: 25px 20px 75px 10px;
-    width: 60%;
-    height: 700px;
+
+    margin: 125px 20px 75px 350px;
+    width: 1200px;
+    height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,17 +38,32 @@
 
 .contact div h3 {
     margin-left: 50px;
-    width: 100%;
+    width: 200px;
     margin-top: 32px;
+}
+
+.sendMessage {
+    background-color: gray;
+    opacity: 90%;
+    margin-top: -350px;
+    margin-left: 100px;
+    margin-right: 150px;
+    border-radius: 30px;
+
 }
 
 .sendMessage Input, .sendMessage Textarea {
     display: flex;
-    width: 40%;
+    width: 300px;
     margin-left: 48px;
-    margin-top: 16px;
+    margin-top: 26px;
 }
 
+.sendMessage button {
+    margin-left: 145px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
 
 .contact div {
     width: 50%;

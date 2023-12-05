@@ -1,10 +1,10 @@
 
 .LoginForm {
-    background-color:black;
-    color:aliceblue;
+    background-color: black;
+    color: aliceblue;
     width: 500px;
-    height: 600px;
-    opacity: 50%;
+    height: 650px;
+    opacity: 80%;
     position: absolute;
     margin: auto;
     border-radius: 30px;
@@ -13,6 +13,7 @@
     top: 0;
     bottom: 0;
     padding: 50px;
+    color: black;
 }
 
 .icon {
@@ -29,4 +30,7 @@
     display: flex;
     justify-content: center;
 }
-.inputlogin {color:black}
+
+.inputlogin {
+    color: black
+}
